@@ -1,0 +1,325 @@
+<main>
+	<h1 class="text-center">Courses</h1>
+	<section>
+		<a href="/create/course" class="btn btn-warning">Create Course</a>
+		<form class="search float-right">
+			<label>Search: </label>
+			<input type="text" name="filter" value="{{search}}" />
+			<input type="submit" class="btn btn-info" value="Search" />
+		</form>
+	</section>
+
+	<div class="container mt-3">
+		<div class="row">
+			<div class="card-deck d-flex justify-content-center">
+				{{#each courses}}
+					<div class="card mb-4">
+						<img
+							class="card-img-top"
+							src="{{imgUrl}}"
+							alt="Card image cap"
+							width="400"
+						/>
+						<div class="card-body">
+							<h4 class="card-title">{{title}}</h4>
+						</div>
+						<div class="card-footer">
+							<a href="/details/{{_id}}"><button
+									type="button"
+									class="btn btn-info"
+								>Details</button></a>
+							<small class="float-right">{{createdAt}}</small>
+						</div>
+					</div>
+				{{else}}
+					<h3 class="text-center">No courses...</h3>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+
+</main>
+
+<footer class="page-footer font-small">
+	<div class="footer-copyright text-center py-3">© 2021
+		<a href="/">Video Tutorials</a>
+	</div>
+</footer>
+
+{{!-- <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand">Video Tutorials</a>
+
+		<ul class="navbar-nav ml-auto">
+
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home </a>
+			</li>
+
+			{{#if loggedIn}}
+
+				<li class="nav-item">
+					<a class="nav-link" href="#">Welcome, {{username}}</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#">Logout</a>
+				</li>
+
+			{{else}}
+
+				<li class="nav-item">
+					<a class="nav-link" href="/login">Login</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/register">Register</a>
+				</li>
+
+			{{/if}}
+
+		</ul>
+	</nav>
+
+	<section class="notifications">
+		<p class="notification-message">Message...</p>
+	</section> --}}
+
+{{! </div> }}
+{{!-- <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand">Video Tutorials</a>
+
+		<ul class="navbar-nav ml-auto">
+
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home </a>
+			</li>
+
+			{{#if loggedIn}}
+
+				<li class="nav-item">
+					<a class="nav-link" href="#">Welcome, {{username}}</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#">Logout</a>
+				</li>
+
+			{{else}}
+
+				<li class="nav-item">
+					<a class="nav-link" href="/login">Login</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/register">Register</a>
+				</li>
+
+			{{/if}}
+
+		</ul>
+	</nav>
+
+	<section class="notifications">
+		<p class="notification-message">Message...</p>
+	</section> --}}
+
+{{!-- <section class="notifications {{notify.status}}">
+				<p class="notification-message">{{notify.message}}
+					{{#each notify.msgArr}}
+						<br />-
+						{{msg}}
+					{{/each}}
+				</p>
+			</section> --}}
+
+{{! <main>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4">Video Tutorials</h1>
+				<p class="lead">Start Self-Study Today: It'll Change Your Life</p>
+			</div>
+		</div>
+
+		<div>
+			<h1 class="text-center">Top Courses</h1>
+			<div class="container mt-3">
+				<div class="row d-flex justify-content-center"> }}
+
+{{!-- {{#each course}}
+						<div class="course">
+							<img
+								class="course"
+								src="{{imgURL}}"
+								alt="{{title}}"
+								width="400"
+							/>
+
+							<div class="course-body">
+								<h4 class="course-title">{{title}}</h4>
+							</div>
+
+						</div>
+					{{else}}
+						<h4 class="text-center">No courses...</h4>
+					{{/each}} --}}
+
+{{!-- <div class="card-deck">
+						{{#each courses}}
+							<div class="card mb-4">
+								<img
+									class="card-img-top"
+									src="{{imgUrl}}"
+									alt="Card image cap"
+									width="400"
+								/>
+								<div class="card-body">
+									<h4 class="card-title">{{title}}</h4>
+								</div>
+							</div>
+
+						{{else}}
+							<h4 class="text-center">No courses...</h4>
+						{{/each}}
+
+					</div> --}}
+{{! <div class="card-deck">
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="https://miro.medium.com/max/766/1*uPL1uCtLBRSk6akPL2hNzg.jpeg"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">ExpressJS</h4>
+							</div>
+						</div>
+
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="https://colorlib.com/wp/wp-content/uploads/sites/2/angular-logo.png"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">Angular</h4>
+							</div>
+						</div>
+
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">React</h4>
+							</div>
+						</div>
+					</div> }}
+
+{{! </div>
+			</div>
+		</div> }}
+
+{{! </main> }}
+
+{{!-- <main>
+	<h1 class="text-center">Courses</h1>
+	<section>
+		<a href="/create/course" class="btn btn-warning">Create Course</a>
+		<form class="search float-right">
+			<label>Search: </label>
+			<input type="text" name="filter" value="{{search}}" />
+			<input type="submit" class="btn btn-info" value="Search" />
+		</form>
+	</section>
+
+	<div class="container mt-3">
+		<div class="row">
+			<div class="card-deck d-flex justify-content-center">
+				{{#each courses}}
+					<div class="card mb-4">
+						<img
+							class="card-img-top"
+							src="{{imgUrl}}"
+							alt="Card image cap"
+							width="400"
+						/>
+						<div class="card-body">
+							<h4 class="card-title">{{title}}</h4>
+						</div>
+						<div class="card-footer">
+							<a href="/details/{{_id}}"><button
+									type="button"
+									class="btn btn-info"
+								>Details</button></a>
+							<small class="float-right">{{createdAt}}</small>
+						</div>
+					</div>
+				{{else}}
+					<h3 class="text-center">No courses...</h3>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+
+</main>
+
+<footer class="page-footer font-small">
+	<div class="footer-copyright text-center py-3">© 2021
+		<a href="/">Video Tutorials</a>
+	</div>
+</footer> --}}
+
+{{! <div>
+			<h1 class="text-center">Top Courses</h1>
+			<div class="container mt-3">
+				<div class="row d-flex justify-content-center">
+
+					<div class="card-deck">
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="https://blog.cyberpanel.net/wp-content/uploads/2019/03/express-js-cyberpanel.jpeg"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">ExpressJS</h4>
+							</div>
+						</div>
+
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="https://colorlib.com/wp/wp-content/uploads/sites/2/angular-logo.png"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">Angular</h4>
+							</div>
+						</div>
+
+						<div class="card mb-4">
+							<img
+								class="card-img-top"
+								src="http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png"
+								alt="Card image cap"
+								width="400"
+							/>
+							<div class="card-body">
+								<h4 class="card-title">React</h4>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<h4 class="text-center">No courses...</h4>
+
+			</div> }}

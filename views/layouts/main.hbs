@@ -1,0 +1,49 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Video Tutorials</title>
+		<link href="../static/css/site.css" type="text/css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+	</head>
+
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand">Video Tutorials</a>
+
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home </a>
+					</li>
+					{{#if loggedIn}}
+						<li class="nav-item">
+							<a class="nav-link" href="/">Welcome,
+								{{username}}</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="/logout">Logout</a>
+						</li>
+					{{else}}
+						<li class="nav-item">
+							<a class="nav-link" href="/login">Login</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="/register">Register</a>
+						</li>
+					{{/if}}
+				</ul>
+			</nav>
+
+		{{{body}}}
+
+	</body>
+
+</html>

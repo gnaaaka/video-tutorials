@@ -1,0 +1,71 @@
+<main>
+	<form
+		class="text-center border border-light p-5"
+		action="/login"
+		method="POST"
+	>
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input
+				type="text"
+				class="form-control"
+				placeholder="Username"
+				name="username"
+				value="{{username}}"
+			/>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input
+				type="password"
+				class="form-control"
+				placeholder="Password"
+				name="password"
+				value=""
+			/>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Login</button>
+	</form>
+</main>
+
+<footer class="page-footer font-small">
+	<div class="footer-copyright text-center py-3">© 2021
+		<a href="/">Video Tutorials</a>
+	</div>
+</footer>
+
+{{! <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand">Video Tutorials</a>
+
+		<ul class="navbar-nav ml-auto">
+
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home </a>
+			</li> }}
+
+{{!-- <li class="nav-item">
+				<a class="nav-link" href="#">Welcome, {{username}}</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">Logout</a>
+			</li> --}}
+
+{{! <li class="nav-item">
+				<a class="nav-link" href="#">Login</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="/register">Register</a>
+			</li>
+
+		</ul>
+	</nav> }}
+
+{{! <section class="notifications">
+		<p class="notification-message">Message...</p>
+	</section> }}
+
+{{! </div> }}

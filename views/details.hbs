@@ -1,0 +1,88 @@
+<main>
+	<div class="container">
+		<h1 class="my-4">Course title :
+			{{title}}
+		</h1>
+
+		<div class="row">
+			<div class="col-md-8">
+				<img class="img-fluid" src="{{imgUrl}}" alt="{{title}}" />
+			</div>
+
+			<div class="col-md-4 text-center">
+				<h3 class="my-3">Course Description</h3>
+
+				<p>{{description}}</p>
+
+				{{#if isCreator}}
+					<a
+						class="btn btn-danger"
+						href="/delete/course/{{_id}}"
+						onclick="return confirm('Are you sure you want to delete this course?')"
+					>Delete</a>
+					<a
+						class="btn btn-warning"
+						href="/edit/course/{{_id}}"
+					>Edit</a>
+				{{else if enrolled}}
+					<span class="enrolled-span">You are already enrolled</span>
+				{{else}}
+					<a class="btn btn-primary" href="/enroll/{{_id}}">Enroll</a>
+				{{/if}}
+
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer font-small">
+	<div class="footer-copyright text-center py-3">© 2021
+		<a href="/">Video Tutorials</a>
+	</div>
+</footer>
+
+{{! <h1 class="my-4">Course title : Testing the Details }}
+
+{{! <img
+						class="img-fluid"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+						alt="test title"
+					/> }}
+
+{{! <a class="btn btn-danger" href="/">Delete</a>
+					<a class="btn btn-warning" href="/">Edit</a>
+					<span class="enrolled-span">You are already enrolled</span>
+					<a class="btn btn-primary" href="/">Enroll</a> }}
+
+{{!-- <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand">Video Tutorials</a>
+
+		<ul class="navbar-nav ml-auto">
+
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home </a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">Welcome, {{username}}</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">Logout</a>
+			</li> --}}
+
+{{! <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li> }}
+
+{{! </ul>
+	</nav> }}
+
+{{! <section class="notifications">
+            <p class="notification-message">Message...</p>
+        </section> }}
